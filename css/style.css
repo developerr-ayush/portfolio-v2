@@ -1,0 +1,332 @@
+/* roboto font  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* basic code for whole website  */
+html {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+
+.inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1%;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* navigation starts  */
+.logo a {
+    text-decoration: none;
+    color: #ff063c;
+    font-size: 3rem;
+
+}
+
+.rightNav li {
+    margin-left: 40px;
+}
+
+.rightNav a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #212121;
+    text-transform: uppercase;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navbar {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+}
+
+.closeNavBar {
+    display: none;
+}
+
+@media (max-width:767px) {
+    .closeNavBar {
+        display: block;
+    }
+
+    .rightNav .flexbox {
+        flex-direction: column;
+        position: fixed;
+        z-index: 1000;
+        left: -1000vh;
+        background-color: #fff;
+        width: 100%;
+        top: 0px;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+
+
+    }
+
+    .rightNav .flexbox.navbar-active {
+        left: 0;
+    }
+
+    .rightNav li {
+        margin: 10px 10px;
+    }
+
+    .hamburger {
+        display: block;
+
+    }
+
+    .hamburger span {
+        font-size: 4rem;
+    }
+}
+
+/* banner starts  */
+.banner {
+    margin-top: 100px;
+    width: 100%;
+    height: 800px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.banner .inner {
+    position: relative;
+}
+
+.banner .boxGradientOne {
+    width: 450px;
+    position: relative;
+    height: 550px;
+    margin-top: 30px;
+    background-image: linear-gradient(#3000ce, #7f44c0);
+}
+
+.banner .boxGradientTwo {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    justify-content: center;
+    /* left: 350px; */
+    left: 33%;
+    width: 750px;
+    height: 650px;
+    background-image: linear-gradient(#ff063c, #7f44c0);
+    z-index: 2;
+    font-size: 10px;
+    padding-right: 50px;
+}
+
+.banner .boxGradientThree {
+    position: absolute;
+    top: 130px;
+    left: 60%;
+
+    width: 100vw;
+    height: 680px;
+    background-image: linear-gradient(45deg, #3000ce, #7f44c0);
+
+}
+
+@media (min-width:768px) {
+    .boxGradientTwo {
+        padding-left: 190px;
+        padding-right: 30px;
+    }
+}
+
+.boxGradientTwo h1 {
+    font-size: 12em;
+    line-height: 1;
+}
+
+.boxGradientTwo p {
+    font-size: 2.3em;
+    margin-top: 25px;
+    font-weight: 400;
+    padding-right: 15px;
+    line-height: 1.6;
+}
+
+.boxGradientTwo button {
+    max-width: 220px;
+    padding: 15px 0;
+    margin-top: 30px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 1.6em;
+
+}
+
+.boxGradientOne img {
+    width: 100%;
+}
+
+.imageWrapper {
+    position: absolute;
+    z-index: 30;
+    width: 100%;
+    top: 10%;
+    left: 10%;
+}
+
+.boxSmallGradient {
+    position: absolute;
+    background-image: linear-gradient(-45deg, #ff063c, #7f44c0);
+    bottom: 23px;
+    z-index: 10;
+    width: 70px;
+    height: 70px;
+    right: 20px;
+
+}
+
+@media (max-width:1200px) {
+
+    .banner .boxGradientTwo {
+        width: 600px;
+        height: 700px;
+        padding-left: 140px;
+    }
+
+    .banner .boxGradientOne {
+        width: 400px;
+    }
+}
+
+@media (max-width:991px) {
+    .banner .boxGradientOne {
+        width: 300px;
+        height: 400px;
+    }
+
+    .banner .boxGradientTwo {
+        padding-left: 150px;
+        left: 200px;
+    }
+}
+
+@media (max-width:767px) {
+    .banner .boxGradientOne {
+        position: relative;
+        left: -230px;
+    }
+
+    .banner .boxGradientOne .imageWrapper {
+        left: 250px;
+        width: 130%;
+
+    }
+
+    .banner .boxGradientTwo {
+        font-size: 6px;
+        height: auto;
+        top: 108%;
+        left: 3%;
+        padding: 150px 30px 20px;
+        width: 94%;
+    }
+
+    .boxGradientTwo p {
+        font-size: 3em;
+    }
+
+    .boxGradientTwo button {
+        font-size: 2em;
+    }
+
+    .banner {
+        height: 900px;
+    }
+
+    .boxGradientTwo h1 {
+        font-size: 9em;
+    }
+}
+
+@media (max-width:500px) {
+    .banner {
+        height: 1070px;
+    }
+
+
+}
+
+/* skills sections  */
+.skillsSections {
+    margin: 30px auto;
+}
+
+.skillsSections .skills {
+    width: 30%;
+}
+
+.iconSize {
+    width: 50px;
+    height: 50px;
+    background-color: #ff063c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.iconSize span {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 100;
+}
+
+.skills h3 {
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.skills p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.skill1 .iconSize{
+    background-color: #7f44c0;
+}
+.skill2 .iconSize{
+    background-color: #3000ce;
+}
+.skill3 .iconSize{
+    background-color: #bd1e40;
+}
+@media (max-width:767px) {
+    .skillsSections{
+        flex-direction: column;
+    }    
+    .skillsSections .skills{
+        width: 80%;
+        margin: 30px auto;
+    }
+}

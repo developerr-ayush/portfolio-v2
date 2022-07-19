@@ -4,6 +4,11 @@
 /* basic code for whole website  */
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
 }
 
 * {
@@ -115,32 +120,25 @@ html {
     position: relative;
 }
 
-.banner .boxGradientOne {
+.threeBoxOne {
     width: 450px;
-    position: relative;
     height: 550px;
-    margin-top: 30px;
+    position: absolute;
+    left: 0;
+    top: 60px;
     background-image: linear-gradient(#3000ce, #7f44c0);
 }
 
-.banner .boxGradientTwo {
-    position: absolute;
-    top: 0px;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    justify-content: center;
-    /* left: 350px; */
-    left: 33%;
+.threeBoxTwo {
     width: 750px;
     height: 650px;
+    position: absolute;
+    left: 33%;
     background-image: linear-gradient(#ff063c, #7f44c0);
-    z-index: 2;
-    font-size: 10px;
-    padding-right: 50px;
+
 }
 
-.banner .boxGradientThree {
+.threeBoxThree {
     position: absolute;
     top: 130px;
     left: 60%;
@@ -148,140 +146,147 @@ html {
     width: 100vw;
     height: 680px;
     background-image: linear-gradient(45deg, #3000ce, #7f44c0);
+    z-index: -1;
 
 }
 
-@media (min-width:768px) {
-    .boxGradientTwo {
-        padding-left: 190px;
-        padding-right: 30px;
-    }
+
+.textArea {
+    font-size: 10px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    color: #fff;
+    z-index: 12;
+    padding: 20px;
 }
 
-.boxGradientTwo h1 {
-    font-size: 12em;
+.textArea h1 {
+    font-size: 14rem;
     line-height: 1;
 }
 
-.boxGradientTwo p {
-    font-size: 2.3em;
-    margin-top: 25px;
-    font-weight: 400;
-    padding-right: 15px;
-    line-height: 1.6;
+.textArea p {
+    font-size: 2.4rem;
+    line-height: 1.5;
 }
 
-.boxGradientTwo button {
-    max-width: 220px;
-    padding: 15px 0;
-    margin-top: 30px;
+.textArea button {
+    width: 100%;
+    padding: 10px;
+    max-width: 200px;
+    font-size: 1.8rem;
     background-color: transparent;
     color: #fff;
-    border: 2px solid #fff;
-    font-size: 1.6em;
-
-}
-
-.boxGradientOne img {
-    width: 100%;
+    border: 2px solid;
+    outline: none;
+    margin-top: 30px;
 }
 
 .imageWrapper {
     position: absolute;
-    z-index: 30;
+    width: 460px;
+    top: 100px;
+    left: 4%;
+}
+
+.imageWrapper img {
     width: 100%;
-    top: 10%;
-    left: 10%;
 }
 
-.boxSmallGradient {
-    position: absolute;
+.imageWrapper .boxSmallGradient {
+    width: 50px;
+    height: 50px;
     background-image: linear-gradient(-45deg, #ff063c, #7f44c0);
-    bottom: 23px;
-    z-index: 10;
-    width: 70px;
-    height: 70px;
+    position: absolute;
+    bottom: 20px;
     right: 20px;
-
-}
-
-@media (max-width:1200px) {
-
-    .banner .boxGradientTwo {
-        width: 600px;
-        height: 700px;
-        padding-left: 140px;
-    }
-
-    .banner .boxGradientOne {
-        width: 400px;
-    }
 }
 
 @media (max-width:991px) {
-    .banner .boxGradientOne {
-        width: 300px;
+    html {
+        font-size: 7px;
+    }
+
+    .imageWrapper {
+        width: 350px;
         height: 400px;
     }
 
-    .banner .boxGradientTwo {
-        padding-left: 150px;
-        left: 200px;
+    .threeBoxOne {
+        height: 350px;
     }
+
+    .threeBoxTwo {
+        width: 750px;
+        height: 500px;
+        left: 10%;
+    }
+
+    .textArea {
+        left: 400px;
+        width: 400px;
+        padding-right: 50px;
+
+    }
+
+    .threeBoxThree {
+        height: 500px;
+    }
+
+    .banner {
+        height: 636px;
+    }
+
 }
 
 @media (max-width:767px) {
-    .banner .boxGradientOne {
-        position: relative;
-        left: -230px;
-    }
-
-    .banner .boxGradientOne .imageWrapper {
-        left: 250px;
-        width: 130%;
-
-    }
-
-    .banner .boxGradientTwo {
-        font-size: 6px;
-        height: auto;
-        top: 108%;
-        left: 3%;
-        padding: 150px 30px 20px;
-        width: 94%;
-    }
-
-    .boxGradientTwo p {
-        font-size: 3em;
-    }
-
-    .boxGradientTwo button {
-        font-size: 2em;
-    }
-
     .banner {
-        height: 900px;
+        height: 991px;
     }
 
-    .boxGradientTwo h1 {
-        font-size: 9em;
+    .threeBoxTwo,
+    .textArea {
+        top: 350px;
+        left: 10%;
+        width: 88%;
+        height: 640px;
+        padding-top: 250px;
+    }
+
+    .threeBoxOne {
+        left: -200px;
+    }
+
+    .threeBoxThree {
+        top: 200px;
+        left: 20%;
     }
 }
 
-@media (max-width:500px) {
-    .banner {
-        height: 1070px;
+@media (max-width:540px) {
+    .imageWrapper {
+        width: 300px;
     }
 
+    .textArea h1 {
+        font-size: 10rem;
+    }
 
+    .threeBoxTwo,
+    .textArea {
+        padding-top: 200px;
+    }
 }
 
 /* skills sections  */
 .skillsSections {
-    margin: 30px auto;
+    margin: 100px auto;
+    width: 100%;
+    overflow: hidden;
 }
 
-.skillsSections .skills {
+.skillsSections>div {
     width: 30%;
 }
 
@@ -303,30 +308,642 @@ html {
 
 .skills h3 {
     margin: 20px 0;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: 400;
 }
 
 .skills p {
-    font-size: 1.4rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
 }
-.skill1 .iconSize{
+
+.skill1 .iconSize {
     background-color: #7f44c0;
 }
-.skill2 .iconSize{
+
+.skill2 .iconSize {
     background-color: #3000ce;
 }
-.skill3 .iconSize{
+
+.skill3 .iconSize {
     background-color: #bd1e40;
 }
+
 @media (max-width:767px) {
-    .skillsSections{
+    .skillsSections {
         flex-direction: column;
-    }    
-    .skillsSections .skills{
+    }
+
+    .skillsSections>div {
         width: 80%;
         margin: 30px auto;
     }
+
+    .skillsSections {
+        margin: 50px auto;
+    }
 }
+
+
+/* skills section  */
+.futurePlans .inner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 860px;
+}
+
+.futurePlans {
+    background-image: linear-gradient(to top, #f2f2f2 50%, #fff 50%);
+
+}
+
+.futurePlans .mainImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60%;
+    z-index: 1;
+}
+
+.futurePlans .boxSmallGradient2 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1;
+    background-image: linear-gradient(45deg, #7f44c0, #ff063c);
+
+}
+
+.futurePlans .bgGradientBox {
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    top: 300px;
+    left: 30%;
+    background-image: linear-gradient(#ff063c, #7f44c0);
+}
+
+.futurePlans .lapiSection {
+    position: absolute;
+    right: 0;
+    width: 200px;
+}
+
+.futurePlans .textBoxSkills {
+    position: absolute;
+    background-color: #fff;
+    z-index: 2;
+    top: 350px;
+    left: 50%;
+    padding: 50px;
+}
+
+.futurePlans .textBoxSkills h2 {
+    font-size: 3rem;
+
+}
+
+.futurePlans .textBoxSkills p {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.futurePlans .textBoxSkills a {
+    color: #ff063c;
+    font-size: 2rem;
+    text-decoration: none;
+
+}
+
+@media (max-width:767px) {
+    .futurePlans .bgGradientBox {
+        top: 22%;
+        height: 300px;
+        left: 10%;
+        width: 70%;
+    }
+
+    .futurePlans .textBoxSkills {
+        top: 34%;
+        left: 30%;
+        width: 68%;
+    }
+
+    .futurePlans .mainImage {
+        top: 5%;
+    }
+
+    .futurePlans .lapiSection {
+        display: none;
+    }
+
+    .futurePlans .inner {
+        height: 530px;
+    }
+}
+
+@media (max-width:500px) {
+    .futurePlans .inner {
+        height: 700px;
+    }
+
+    .futurePlans .textBoxSkills {
+        padding: 30px;
+        top: 45%;
+        left: 10%;
+        width: 80%;
+    }
+
+    .futurePlans .mainImage {
+        left: 10%;
+        width: 80%;
+    }
+
+    .futurePlans .bgGradientBox {
+        left: 30%;
+        height: 400px;
+        width: 100%;
+    }
+}
+
+
+/* languages i know section  */
+.language {
+    background-color: #f2f2f2;
+    padding: 30px 0;
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+}
+
+.heading h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.heading h2 span {
+    color: #ff063c;
+}
+
+.language .knowingDetails {
+    width: 30%;
+    margin: 50px 0;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.knowingDetails.purple {
+    border: 1px solid #3000ce;
+
+}
+
+.knowingDetails.red {
+    border: 1px solid #ff063c;
+
+}
+
+.knowingDetails h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.knowingDetails p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.knowingDetails .iconOrImage {
+    width: 50px;
+    margin: auto;
+}
+
+@media (max-width:767px) {
+    .language .knowingDetails {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+
+/* mentor section  */
+.mentor {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mentor .inner {
+    position: relative;
+    padding-top: 50px;
+    height: 1000px;
+    z-index: 2;
+
+}
+
+.leftSidetext {
+    width: 40%;
+    color: #fff;
+}
+
+.leftSidetext h2 {
+    font-size: 4rem;
+    line-height: 1.3;
+}
+
+.leftSidetext p {
+    font-size: 2rem;
+    line-height: 1.7;
+    margin: 40px 0;
+}
+
+.leftSidetext button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 200px;
+    transition: .3s;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.leftSidetext button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.mentor .backgroundBox {
+    width: 1250px;
+    min-width: 60%;
+    height: 900px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(45deg, #3000ce, #7f44c0);
+}
+
+.rightBoxOne {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    background-image: linear-gradient(#ff063c, #7f44c0);
+}
+
+.imgone,
+.imgtwo,
+.imgthree {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 2px 2px 50px;
+}
+
+.imgone img,
+.imgtwo img,
+.imgthree img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgone {
+    top: 10%;
+    right: 0%;
+    z-index: 2;
+}
+
+.imgtwo {
+    top: 30%;
+    right: 25%;
+    z-index: 2;
+}
+
+.imgthree {
+    top: 55%;
+    right: 5%;
+    z-index: 3;
+}
+
+@media (max-width:991px) and (min-width:768px) {
+    .leftSidetext p {
+        font-size: 2.9rem;
+    }
+
+    .leftSidetext button {
+        font-size: 2rem;
+    }
+
+    .leftSidetext h2 {
+        font-size: 5rem;
+    }
+
+    .imgone,
+    .imgtwo,
+    .imgthree {
+        width: 250px;
+        height: 350px;
+
+    }
+
+    .mentor .inner {
+        height: 800px;
+    }
+}
+
+@media (max-width:767px) {
+    .leftSidetext {
+        width: 90%;
+        margin: auto;
+    }
+
+    .mentor .inner {
+        height: 1350px;
+    }
+
+    .imgone,
+    .imgtwo,
+    .imgthree {
+        width: 250px;
+        height: 330px;
+
+    }
+
+    .imgone {
+
+        top: 600px;
+        right: 10%;
+    }
+
+    .imgtwo {
+
+        top: 750px;
+        right: 45%;
+    }
+
+    .imgthree {
+        top: 950px;
+        right: 10%;
+
+    }
+
+    .rightBoxOne {
+        top: 650px;
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+
+    .imgone,
+    .imgtwo,
+    .imgthree {
+        width: 210px;
+        height: 280px;
+
+    }
+
+    .imgone {
+
+        top: 680px;
+    }
+
+    .imgtwo {
+
+        top: 830px;
+    }
+
+    .imgthree {
+        top: 1030px;
+
+    }
+
+    .rightBoxOne {
+        top: 730px;
+    }
+
+}
+
+/* .mywork {
+    height: 1000px;
+} */
+.mywork {
+    overflow: hidden;
+}
+.mywork .header {
+    text-align: center;
+    width: 100%;
+    
+    
+}
+.mywork .inner {
+    position: relative;
+}
+.bgBoxGradient{
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    background-image: linear-gradient(-45deg, #ff063c, #7f44c0);
+}
+.bgBoxGradient2{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    background-image:linear-gradient(45deg, #3000ce, #7f44c0);
+}
+.mywork .header h2 {
+    font-size: 24px;
+
+}
+
+.mywork .header p {
+    font-size: 17px;
+    margin: 20px 0;
+}
+
+.mywork .workShowing {
+    width: 100%;
+    position: relative;
+    /* height: 240px; */
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 40px 0;
+    /* overflow: hidden; */
+}
+
+.mywork .workShowing .imageWrapWork {
+    height: 240px;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+    transition: 5s;
+}
+
+.mywork .workShowing .imageWrapWork img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mywork .workShowing:hover .imageWrapWork img {
+    transition: 5s ease-in-out;
+
+    top: -1400px;
+}
+
+.mywork .workShowing img {
+    border-radius: 5px;
+}
+
+.mywork .workShowing .textHover {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px -5px;
+    transition-timing-function: ease-in-out;
+}
+
+.mywork .workShowing .textHover span {
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid;
+    color: #7f44c0;
+    margin: 5px;
+    width: 100%;
+    max-width: 100px;
+    text-align: center;
+}
+
+.mywork .workShowing.red .textHover span,
+.mywork .workShowing.red .textHover a {
+    color: #ff063c;
+}
+
+.mywork .workShowing.purple .textHover a,
+.mywork .workShowing.purple .textHover span {
+    color: #3000ce;
+}
+
+
+
+.mywork .workShowing .textHover h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.mywork .workShowing .textHover p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.mywork .workShowing .textHover a {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #ff063c;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background-color: #ff063c !important;
+    width: 40px !important;
+}
+.owl-theme .owl-dots .owl-dot span{
+    background-color: #fff !important;
+    transition: .3s;
+}
+/* contact section  */
+.contact .flexbox{  
+    justify-content: center;
+
+}
+.contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+.contact .header{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact .header h3{
+    font-size: 2.4rem;
+}
+
+.contact .designBox{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+.contact .designBox .iconBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ff063c;
+    border-radius: 100%;
+    margin: 20px 0;
+}
+.contact .designBox .iconBox span{
+    color: #fff;
+    font-weight: 100;
+    font-size: 30px;
+}
+.contact .designBox.red .iconBox{
+    background-color: #ff063c;
+    
+}
+.contact .designBox.purple .iconBox{
+    background-color: #7f44c0;
+    
+}
+.contact .designBox.blue .iconBox{
+    background-color: #3000ce;
+
+}
+    .contact .designBox h6{
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1.3px;
+    }
+    @media (max-width:500px) {
+        .contact .designBox{
+            width: 80%;
+        }
+    }
+    footer{
+        text-align: center;
+        padding: 20px;    
+        background-image: linear-gradient(-45deg, #ff063c, #7f44c0);
+    }
+    footer p{
+        font-size: 20px;
+        color: #fff;
+    }
+    footer p a{
+        color: #fff;
+    }
